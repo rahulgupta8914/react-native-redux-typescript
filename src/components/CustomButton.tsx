@@ -19,7 +19,6 @@ const CustomButton: React.FC<Props> = (props: Props) => {
       style={{
         ...customButton,
         height: verticalScale(50),
-        opacity: disabled ? 0.1 : 1,
       }}
       activeOpacity={activeOpacity}
       disabled={disabled}

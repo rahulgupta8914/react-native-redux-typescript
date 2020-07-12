@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Text, View } from 'react-native';
+import { Text, View, ActivityIndicator, StyleSheet } from 'react-native';
 import { center } from '../../styles';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../../navigation/index';
@@ -29,9 +29,19 @@ const SplashScreen: React.FC<Props> = () => {
 
   return (
     <View style={center}>
-      <Text>SplashScreen</Text>
+      <Text style={styles.text}>Splash Screen</Text>
+      <ActivityIndicator color="#8a2be2" size="large" />
     </View>
   );
 };
+const styles = StyleSheet.create({
+  text: {
+    color: '#8a2be2',
+    fontSize: 30,
+    letterSpacing: 8,
+    fontWeight: 'bold',
+    paddingBottom: 35,
+  },
+});
 
 export default SplashScreen;

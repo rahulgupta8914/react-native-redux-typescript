@@ -30,7 +30,7 @@ export const customTextInputStyle: TextStyle | ViewStyle = {
   backgroundColor: Colors.azure,
   borderRadius: 5,
   marginBottom: 20,
-  borderColor: '#8b008b',
+  borderColor: '#8a2be2',
   borderWidth: 3,
   paddingLeft: 9,
   ...baseTextStyle,
@@ -45,7 +45,7 @@ export const customButton: ViewStyle = {
   flexDirection: 'row',
   borderRadius: 5,
   backgroundColor: Colors.azure,
-  borderColor: '#8b008b',
+  borderColor: '#8a2be2',
   borderWidth: 3,
   marginBottom: 20,
 };

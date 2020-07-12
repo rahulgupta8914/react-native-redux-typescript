@@ -7,6 +7,8 @@ import {
   TouchableWithoutFeedback,
   StyleSheet,
   Alert,
+  KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import { clickAbleTextStyle, headingText } from '../../styles';
 import { RootStackParamList } from '../../navigation/index';
@@ -78,7 +80,9 @@ const SignInScreen: React.FC<Props> = (props) => {
   };
 
   return (
-    <View style={styles.contentWrapper}>
+    <KeyboardAvoidingView
+      style={styles.contentWrapper}
+      behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
         <View style={styles.handleSpace}>
           <Text style={headingText}>Sign In</Text>
@@ -122,7 +126,7 @@ const SignInScreen: React.FC<Props> = (props) => {
           <Text style={clickAbleTextStyle}>Create an account</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </KeyboardAvoidingView>
   );
 };
 
