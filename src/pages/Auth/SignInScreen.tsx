@@ -91,7 +91,7 @@ const SignInScreen: React.FC<Props> = (props) => {
         )}
         <CustomTextInput
           placeholder="Enter email"
-          maxLength={25}
+          maxLength={50}
           value={values.email || ''}
           autoCompleteType="email"
           onChangeText={(text: string) => handleChange(text, 'email')}
