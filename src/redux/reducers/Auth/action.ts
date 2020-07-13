@@ -56,16 +56,19 @@ export const loginAction = (
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   password: string,
 ): AppThunk => async (dispatch) => {
+  const emailTemp = email.split('@')[0];
+  const userName =
+    emailTemp!.charAt(0).toUpperCase() + emailTemp!.slice(1).toLowerCase();
   try {
     await AsyncStorage.multiSet([
       ['token', "I'm very well token"],
-      ['userName', `${email.split('@')[0]}`],
+      ['userName', `${userName}`],
     ]);
     dispatch({
       type: LOGIN,
       payload: {
         loggedIn: true,
-        userName: email.split('@')[0],
+        userName: userName,
         isLoading: false,
       },
     });
