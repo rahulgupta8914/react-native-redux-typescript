@@ -24,7 +24,9 @@ const HomeScreen: React.FC<Props> = () => {
         <Text style={styles.mainHead}>Welcome, {`${userName}`}</Text>
         <Text style={styles.subHead}>Browse Latest News</Text>
       </View>
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
+      <ScrollView
+        contentInsetAdjustmentBehavior="automatic"
+        contentContainerStyle={styles.scrollView}>
         <View style={styles.newsContainer}>
           <View style={styles.tinyWrrapper}>
             <Image style={styles.tinyIcon} source={newsIcons[0]} />
@@ -241,11 +243,17 @@ const HomeScreen: React.FC<Props> = () => {
 };
 
 const styles = StyleSheet.create({
-  header: { paddingBottom: 15 },
+  header: {
+    paddingBottom: 15,
+    paddingLeft: 15,
+    paddingRight: 15,
+  },
   mainHead: { fontSize: 30 },
   subHead: { fontSize: 18 },
   contentWrapper: {
     flex: 1,
+  },
+  scrollView: {
     paddingLeft: 15,
     paddingRight: 15,
   },

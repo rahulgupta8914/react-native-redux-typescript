@@ -1,4 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
 import { TouchableOpacity, Text } from 'react-native';
 import { baseTextStyle, customButton } from '../styles/index';
